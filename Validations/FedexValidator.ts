@@ -30,8 +30,8 @@ export default class FedexValidator extends Validator {
          */
         const rules = this.Shipment.getRulesObject();
 
-        if (!(rules.serviceID.includes(obj.shipmentServiceId)))
-            this.violations.push({ shipmentServiceId: "Wrong shipment service id !" });
+        if (!(rules.serviceID.includes(obj.carrierServiceId)))
+            this.violations.push({ carrierServiceId: "Wrong shipment service id !" });
         if (rules.width != this.getUnit(obj.width))
             this.violations.push({ width: "Wrong width unit !" });
         if (rules.height != this.getUnit(obj.height))

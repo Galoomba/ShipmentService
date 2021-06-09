@@ -11,10 +11,10 @@ export default class Fedex extends Shipment {
      */
     protected rules = {
         serviceID: ['fedexAIR', 'fedexGroud'],
-        width: 'inch',
-        height: 'inch',
-        length: 'inch',
-        weight: 'inch',
+        width: 'cm',
+        height: 'cm',
+        length: 'cm',
+        weight: 'gram',
     };
 
     /**

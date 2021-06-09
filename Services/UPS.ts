@@ -8,10 +8,10 @@ export default class UPS extends Shipment {
      */
     protected rules = {
         serviceID: ['UPSExpress', 'UPS2DAY'],
-        width: 'cm',
-        height: 'cm',
-        length: 'cm',
-        weight: 'cm',
+        width: 'inch',
+        height: 'inch',
+        length: 'inch',
+        weight: 'pound',
     };
 
     /**
