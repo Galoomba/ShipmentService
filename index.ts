@@ -1,4 +1,4 @@
-import express from "express";
+import express, { Request, Response } from "express";
 import bodyParser from "body-parser";
 import routes from "./routes";
 import ErrorHandler from "./config/ErrorHandler";
@@ -18,6 +18,13 @@ app.use(bodyParser.json());
  * Register App Routes.
  */
 routes(app);
+
+/**
+ * Register express not found middleware.
+ */
+ app.use((req:Request, res:Response) => {
+    res.status(404).send({errors: ['not found']});
+  });
 
 /**
  * Register App ErrorHandler.
