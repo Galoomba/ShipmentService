@@ -14,9 +14,9 @@ export default class ValidationFactory {
 
     private constructor() { }
 
-    public static getInstance(ShipmentObj: Shipment) {
+    public static getInstance(shipment: Shipment) {
         try {
-            this.INSTANCE = ValidationEnum[ShipmentObj.getValidationName()](ShipmentObj);
+            this.INSTANCE = ValidationEnum[shipment.getValidationName()](shipment);
             return this.INSTANCE;
         } catch (e) {
             throw new ValidationNotFoundException();
